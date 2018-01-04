@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Application.Insights</Name>
+    <ProjectGuid>6c54eac1-21b0-4dbe-a7c8-59e4a4f81316</ProjectGuid>
+    <OutputType>Console</OutputType>
+    <RootNamespace>Application.Insights</RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <StartupFile>
+    </StartupFile>
+    <AssemblyName>Application.Insights</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationInsights\Channel\Contracts\Application.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Data.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Data_Point.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Data_Point_Type.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Device.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Envelope.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Event_Data.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Exception_Data.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Exception_Details.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Internal.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Location.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Message_Data.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Metric_Data.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Operation.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Page_View_Data.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Request_Data.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Session.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Stack_Frame.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\User.php" />
+    <Compile Include="ApplicationInsights\Channel\Contracts\Utils.php" />
+    <Compile Include="ApplicationInsights\Current_User.php" />
+    <Compile Include="ApplicationInsights\Current_Session.php" />
+    <Compile Include="ApplicationInsights\Telemetry_Context.php" />
+    <Compile Include="ApplicationInsights\Channel\Telemetry_Channel.php" />
+    <Compile Include="ApplicationInsights\Telemetry_Client.php" />
+    <Compile Include="ApplicationInsights\Tests\Bootstrap.php" />
+    <Compile Include="ApplicationInsights\Tests\Channel\Contracts\Utils_Test.php" />
+    <Compile Include="ApplicationInsights\Tests\Current_User_Test.php" />
+    <Compile Include="ApplicationInsights\Tests\Current_Session_Test.php" />
+    <Compile Include="ApplicationInsights\Tests\Utils.php" />
+    <Compile Include="ApplicationInsights\Tests\Telemetry_Context_Test.php" />
+    <Compile Include="ApplicationInsights\Tests\Telemetry_Client_Test.php" />
+    <Compile Include="ApplicationInsights\Tests\Channel\Telemetry_Channel_Test.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationInsights\" />
+    <Folder Include="ApplicationInsights\Channel\" />
+    <Folder Include="ApplicationInsights\Channel\Contracts\" />
+    <Folder Include="ApplicationInsights\Tests\" />
+    <Folder Include="ApplicationInsights\Tests\Channel\" />
+    <Folder Include="ApplicationInsights\Tests\Channel\Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="composer.json" />
+    <Content Include="LICENSE.txt" />
+    <Content Include="phpdoc.xml" />
+    <Content Include="phpunit.xml" />
+    <Content Include="README.md" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+[
+    {
+        "name": "microsoft/application-insights",
+        "version": "0.3.1",
+        "version_normalized": "0.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Microsoft/ApplicationInsights-PHP.git",
+            "reference": "3cefd65d60eb14de6e592b4aad59076863a0ffaf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Microsoft/ApplicationInsights-PHP/zipball/3cefd65d60eb14de6e592b4aad59076863a0ffaf",
+            "reference": "3cefd65d60eb14de6e592b4aad59076863a0ffaf",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": ">=5.0 <=6.1.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "evert/phpdoc-md": "~0.0.7",
+            "phpunit/phpunit": "~4.3"
+        },
+        "time": "2016-02-01 22:00:31",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ApplicationInsights\\": "ApplicationInsights/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "This project extends the Application Insights API surface to support PHP.",
+        "homepage": "https://github.com/Microsoft/ApplicationInsights-PHP",
+        "keywords": [
+            "Insights",
+            "log",
+            "logging",
+            "monitoring",
+            "telemetry"
+        ]
+    }
+]
