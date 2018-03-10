@@ -1,5 +1,5 @@
 # WordPress VSTS CI/CD
-This is a sample wordpress project that can be use in order to setup a VSTS CI/CD pipeline. <br><br>
+Read more at Azure Blogs - https://azure.microsoft.com/en-us/blog/deploying-wordpress-application-using-vsts-and-azure-part-one/ <br><br>
 Under 'html' folder – sample WordPress files. <br>
 Under 'db' folder you will find initial db schema and data that you can use. <br><br>
 You can build a new docker image using this Dockerfile and then docker run it using the following command: <br>
