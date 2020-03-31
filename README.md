@@ -1,4 +1,4 @@
-# WordPress VSTS CI/CD
+# Building WordPress site using Azure DevOps and hosting it on Azure App Service
 Read my two articles about custom WordPress solution hosted on Azure App Service at Azure Blogs <br> 
 <a href='https://azure.microsoft.com/en-us/blog/deploying-wordpress-application-using-vsts-and-azure-part-one'>Part 1</a><br>
 <a href='https://azure.microsoft.com/en-us/blog/deploying-wordpress-application-using-visual-studio-team-services-and-azure-part-two/'>Part 2</a><br>
