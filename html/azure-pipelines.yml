@@ -1,0 +1,43 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+    - develop
+    
+    pool:
+      vmImage: 'ubuntu-latest'
+    
+    steps:
+    - task: AzureResourceGroupDeployment@2
+      displayName: 'Azure Deployment:Create Azure Container Registry'
+      inputs:
+        azureSubscription: 'dev-subscription'
+        resourceGroupName: 'dev-wordpress-rg'
+        location: 'West Europe'
+        csmFile: '$(System.DefaultWorkingDirectory)/**/containerRegistry-template.json'
+        overrideParameters: '-registryName "simplephpdockeracr" -registryLocation "South Central US" -registrySku "Standard"'
+    - task: Docker@1
+      displayName: 'Build an image'
+      inputs:
+        azureSubscriptionEndpoint: 'dev-subscription'
+        azureContainerRegistry: devwordpressacr.azurecr.io
+        imageName: 'wordpress-dev:$(Build.BuildId)'
+    - task: Docker@1
+      displayName: 'Push an image'
+      inputs:
+        azureSubscriptionEndpoint: 'dev-subscription'
+        azureContainerRegistry: devwordpressacr.azurecr.io
+        command: 'Push an image'
+        imageName: 'wordpress-dev:$(Build.BuildId)'
+    - task: CopyFiles@2
+      displayName: 'Copy ARM templates'
+      inputs:
+        SourceFolder: ArmTemplates
+        TargetFolder: '$(build.artifactstagingdirectory)'
+        
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
